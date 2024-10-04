@@ -81,7 +81,7 @@ class BirdX {
                 const postResponse = await axios.post(url, payload, { headers });
                 if (postResponse.data && postResponse.data.balance !== undefined) {
                     this.log(`Registration successful!`, 'success');
-                    this.log(`Balance: ${postResponse.data.balance}`, 'custom');
+                    this.log(`💰: ${postResponse.data.balance}`, 'custom');
                     return postResponse.data;
                 } else {
                     throw new Error("Unable to register account");

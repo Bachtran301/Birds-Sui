@@ -95,7 +95,7 @@ class BirdX {
             const getResponse = await axios.get(url, { headers, httpsAgent: proxyAgent });
             if (getResponse.data && getResponse.data.balance !== undefined) {
                 this.log(`Login successful!`, 'success');
-                this.log(`Balance: ${getResponse.data.balance}`, 'custom');
+                this.log(`💰: ${getResponse.data.balance}`, 'custom');
                 return getResponse.data;
             } else {
                 throw new Error("New account");
