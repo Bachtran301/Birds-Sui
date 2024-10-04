@@ -17,7 +17,7 @@ Run the following command to install the necessary modules:
 
 `npm install`
 
-Create two files: [data.txt] and [proxy.txt]
+Create two files: [data.txt](data.txt) and [proxy.txt](proxy.txt)
 
 For those using multiple accounts, it's recommended to use a proxy (if using only one account, there's no need to create the proxy.txt file).
 
