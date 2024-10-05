@@ -5,6 +5,11 @@ const colors = require('colors');
 const readline = require('readline');
 const { DateTime } = require('luxon');
 const { HttpsProxyAgent } = require('https-proxy-agent');
+const figlet = require('figlet');
+
+console.log(figlet.textSync('PUTICOOL').rainbow);
+console.log('[+] Welcome & Enjoy Sir !'.green);
+console.log('[+] Error? PM Telegram [https://t.me/NothingYub]'.red);
 
 class BirdX {
     constructor() {
