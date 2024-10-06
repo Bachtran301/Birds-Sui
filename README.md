@@ -1,3 +1,5 @@
+![photo_2024-10-03_16-12-50](https://github.com/user-attachments/assets/df0b85a4-3e33-40cf-84af-dbded88529d3)
+
 ✔️ Auto Bug Catching
 
 ✔️ Auto Egg Hatching
