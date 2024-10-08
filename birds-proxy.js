@@ -5,9 +5,16 @@ const colors = require('colors');
 const readline = require('readline');
 const { DateTime } = require('luxon');
 const { HttpsProxyAgent } = require('https-proxy-agent');
-const figlet = require('figlet');
 
-console.log(figlet.textSync('PUTICOOL').rainbow);
+console.clear();
+console.log(`
+██████╗ ██╗   ██╗████████╗██╗ ██████╗ ██████╗  ██████╗ ██╗      
+██╔══██╗██║   ██║╚══██╔══╝██║██╔════╝██╔═══██╗██╔═══██╗██║      
+██████╔╝██║   ██║   ██║   ██║██║     ██║   ██║██║   ██║██║      
+██╔═══╝ ██║   ██║   ██║   ██║██║     ██║   ██║██║   ██║██║      
+██║     ╚██████╔╝   ██║   ██║╚██████╗╚██████╔╝╚██████╔╝███████╗ 
+╚═╝      ╚═════╝    ╚═╝   ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝ 
+        `.cyan);
 console.log('[+] Welcome & Enjoy Sir !'.green);
 console.log('[+] Error? PM Telegram [https://t.me/NothingYub]'.red);
 
@@ -272,10 +279,10 @@ class BirdX {
         const proxyAgent = new HttpsProxyAgent(proxy);
 
         try {
-            const projectResponse = await axios.get("https://birdx-api.birds.dog/project", { headers, httpsAgent: proxyAgent });
+            const projectResponse = await axios.get("https://birdx-api2.birds.dog/project", { headers, httpsAgent: proxyAgent });
             const allTasks = projectResponse.data.flatMap(project => project.tasks);
             
-            const userTasksResponse = await axios.get("https://birdx-api.birds.dog/user-join-task", { headers, httpsAgent: proxyAgent });
+            const userTasksResponse = await axios.get("https://birdx-api2.birds.dog/user-join-task", { headers, httpsAgent: proxyAgent });
             const completedTaskIds = userTasksResponse.data.map(task => task.taskId);
 
             const incompleteTasks = allTasks.filter(task => !completedTaskIds.includes(task._id));

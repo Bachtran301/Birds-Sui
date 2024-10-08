@@ -4,9 +4,16 @@ const axios = require('axios');
 const colors = require('colors');
 const readline = require('readline');
 const { DateTime } = require('luxon');
-const figlet = require('figlet');
 
-console.log(figlet.textSync('PUTICOOL').rainbow);
+console.clear();
+console.log(`
+██████╗ ██╗   ██╗████████╗██╗ ██████╗ ██████╗  ██████╗ ██╗      
+██╔══██╗██║   ██║╚══██╔══╝██║██╔════╝██╔═══██╗██╔═══██╗██║      
+██████╔╝██║   ██║   ██║   ██║██║     ██║   ██║██║   ██║██║      
+██╔═══╝ ██║   ██║   ██║   ██║██║     ██║   ██║██║   ██║██║      
+██║     ╚██████╔╝   ██║   ██║╚██████╗╚██████╔╝╚██████╔╝███████╗ 
+╚═╝      ╚═════╝    ╚═╝   ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝ 
+        `.cyan);
 console.log('[+] Welcome & Enjoy Sir !'.green);
 console.log('[+] Error? PM Telegram [https://t.me/NothingYub]'.red);
 
@@ -242,10 +249,10 @@ class BirdX {
         };
 
         try {
-            const projectResponse = await axios.get("https://birdx-api.birds.dog/project", { headers });
+            const projectResponse = await axios.get("https://birdx-api2.birds.dog/project", { headers });
             const allTasks = projectResponse.data.flatMap(project => project.tasks);
             
-            const userTasksResponse = await axios.get("https://birdx-api.birds.dog/user-join-task", { headers });
+            const userTasksResponse = await axios.get("https://birdx-api2.birds.dog/user-join-task", { headers });
             const completedTaskIds = userTasksResponse.data.map(task => task.taskId);
 
             const incompleteTasks = allTasks.filter(task => !completedTaskIds.includes(task._id));
