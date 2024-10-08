@@ -90,7 +90,7 @@ class BirdX {
     }
 
     async callAPI(telegramauth, proxy) {
-        const url = "https://birdx-api.birds.dog/user";
+        const url = "https://birdx-api2.birds.dog/user";
         const headers = { 
             ...this.headers, 
             "Telegramauth": `tma ${telegramauth}`
