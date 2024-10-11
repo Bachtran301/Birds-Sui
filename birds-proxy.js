@@ -5,18 +5,7 @@ const colors = require('colors');
 const readline = require('readline');
 const { DateTime } = require('luxon');
 const { HttpsProxyAgent } = require('https-proxy-agent');
-
-console.clear();
-console.log(`
-██████╗ ██╗   ██╗████████╗██╗ ██████╗ ██████╗  ██████╗ ██╗      
-██╔══██╗██║   ██║╚══██╔══╝██║██╔════╝██╔═══██╗██╔═══██╗██║      
-██████╔╝██║   ██║   ██║   ██║██║     ██║   ██║██║   ██║██║      
-██╔═══╝ ██║   ██║   ██║   ██║██║     ██║   ██║██║   ██║██║      
-██║     ╚██████╔╝   ██║   ██║╚██████╗╚██████╔╝╚██████╔╝███████╗ 
-╚═╝      ╚═════╝    ╚═╝   ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝ 
-        `.cyan);
-console.log('[+] Welcome & Enjoy Sir !'.green);
-console.log('[+] Error? PM Telegram [https://t.me/NothingYub]'.red);
+const printLogo = require("./src/logo");
 
 class BirdX {
     constructor() {
@@ -342,6 +331,7 @@ class BirdX {
         const hoinhiemvu = nhiemvu.toLowerCase() === 'y';
 
         while (true) {
+            printLogo();
             for (let i = 0; i < data.length; i++) {
                 const telegramauth = data[i];
                 const userData = JSON.parse(decodeURIComponent(telegramauth.split('user=')[1].split('&')[0]));
@@ -363,7 +353,7 @@ class BirdX {
                 if (apiResult) {
                     const balance = apiResult.balance;
                     await this.callWormMintAPI(telegramauth, proxy);
-                    await this.playEggMinigame(telegramauth, proxy);
+                    //await this.playEggMinigame(telegramauth, proxy);
                     if (hoinangcapt) {
                         this.log(`Starting egg check and upgrade...`, 'info');
                         await this.nangcap(telegramauth, balance, proxy);
