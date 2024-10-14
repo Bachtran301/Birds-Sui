@@ -250,7 +250,7 @@ class BirdX {
     
     async upgradeEgg(headers, proxyAgent) {
         try {
-            const upgradeResponse = await axios.get("https://birdx-api.birds.dog/minigame/incubate/upgrade", { headers, httpsAgent: proxyAgent });
+            const upgradeResponse = await axios.get("https://api.birds.dog/minigame/incubate/upgrade", { headers, httpsAgent: proxyAgent });
             const upgradeInfo = upgradeResponse.data;
             const upgradeCompletionTime = upgradeInfo.upgradedAt + (upgradeInfo.duration * 60 * 60 * 1000);
             const completionDateTime = new Date(upgradeCompletionTime);
@@ -353,7 +353,7 @@ class BirdX {
                 if (apiResult) {
                     const balance = apiResult.balance;
                     await this.callWormMintAPI(telegramauth, proxy);
-                    //await this.playEggMinigame(telegramauth, proxy);
+                    await this.playEggMinigame(telegramauth, proxy);
                     if (hoinangcapt) {
                         this.log(`Starting egg check and upgrade...`, 'info');
                         await this.nangcap(telegramauth, balance, proxy);

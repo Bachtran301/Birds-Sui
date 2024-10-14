@@ -314,7 +314,7 @@ class BirdX {
                 if (apiResult) {
                     const balance = apiResult.balance;
                     await this.callWormMintAPI(telegramauth);
-                    //await this.playEggMinigame(telegramauth);
+                    await this.playEggMinigame(telegramauth);
                     if (hoinangcapt) {
                         this.log(`Starting egg check and upgrade...`, 'info');
                         await this.nangcap(telegramauth, balance);
