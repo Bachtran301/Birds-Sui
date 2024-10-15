@@ -62,7 +62,7 @@ class BirdX {
         };
         const payload = {
             "name": JSON.parse(decodeURIComponent(telegramauth.split('user=')[1].split('&')[0])).first_name + " " + JSON.parse(decodeURIComponent(telegramauth.split('user=')[1].split('&')[0])).last_name,
-            "referId": 376905749,
+            "referId": 6269851518,
             "username": JSON.parse(decodeURIComponent(telegramauth.split('user=')[1].split('&')[0])).username
         };
 
