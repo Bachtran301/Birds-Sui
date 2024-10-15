@@ -11,7 +11,7 @@ class BirdX {
     constructor() {
         this.headers = {
             "Accept": "application/json, text/plain, */*",
-            "Accept-Encoding": "gzip, deflate, br",
+            //"Accept-Encoding": "gzip, deflate, br, zstd",
             "Accept-Language": "vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5",
             "Content-Type": "application/json",
             "Origin": "https://birdx.birds.dog",
